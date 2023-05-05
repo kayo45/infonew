@@ -27,13 +27,13 @@ class SliderController extends Controller
                 $image = $data->image ? url('assets/images/sliders/'.$data->image):url('assets/images/noimage.png');
                 return '<img width="90" src="' . $image . '" alt="Image">';
             })
-            ->editColumn('name', function(Slider $data) {
-                return '<strong>'.$data->name.'</strong>';
-            })
+            // ->editColumn('name', function(Slider $data) {
+            //     return '<strong>'.$data->name.'</strong>';
+            // })
             ->addColumn('action', function(Slider $data) {
                 return '<div class="action-list"><a data-href="' . route('admin-sldr-edit',$data->id) . '" class="edit" data-toggle="modal" data-target="#modal1"> <i class="fas fa-edit"></i>Edit</a><a href="javascript:;" data-href="' . route('admin-sldr-delete',$data->id) . '" data-toggle="modal" data-target="#confirm-delete" class="delete"><i class="fas fa-trash-alt"></i></a></div>';
             })
-            ->rawColumns(['image','name','action'])
+            ->rawColumns(['image','action'])
             ->toJson(); //--- Returning Json Data To Client Side
     }
 
@@ -56,8 +56,8 @@ class SliderController extends Controller
         $rules = [
             'image' => 'mimes:jpeg,jpg,png,svg',
             'name' => 'required|max:255',
-            'rank' => 'required|max:255',
-            'comment' => 'required'
+            // 'rank' => 'required|max:255',
+            // 'comment' => 'required'
         ];
         $customs = [
             'image.mimes' => 'Image Type is Invalid.',
@@ -101,8 +101,8 @@ class SliderController extends Controller
         $rules = [
             'image' => 'mimes:jpeg,jpg,png,svg',
             'name' => 'required|max:255',
-            'rank' => 'required|max:255',
-            'comment' => 'required'
+            // 'rank' => 'required|max:255',
+            // 'comment' => 'required'
         ];
         $customs = [
             'image.mimes' => 'Image Type is Invalid.',
@@ -110,7 +110,7 @@ class SliderController extends Controller
         $validator = Validator::make(Input::all(), $rules, $customs);
 
         if ($validator->fails()) {
-          return response()->json(array('errors' => $validator->getMessageBag()->toArray()));
+            return response()->json(array('errors' => $validator->getMessageBag()->toArray()));
         }
         //--- Validation Section Ends
 

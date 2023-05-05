@@ -31,41 +31,6 @@
                           </div>
                         </div>
 
-                        <div class="row">
-                          <div class="col-lg-4">
-                            <div class="left-area">
-                                <h4 class="heading">Name *</h4>
-                                <p class="sub-heading">(In Any Language)</p>
-                            </div>
-                          </div>
-                          <div class="col-lg-7">
-                            <input type="text" class="input-field" name="name" placeholder="Enter Name" required="" value="">
-                          </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-lg-4">
-                            <div class="left-area">
-                                <h4 class="heading">Rank *</h4>
-                                <p class="sub-heading">(In Any Language)</p>
-                            </div>
-                          </div>
-                          <div class="col-lg-7">
-                            <input type="text" class="input-field" name="rank" placeholder="Enter Rank" required="" value="">
-                          </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-lg-4">
-                            <div class="left-area">
-                                <h4 class="heading">Comment *</h4>
-                                <p class="sub-heading">(In Any Language)</p>
-                            </div>
-                          </div>
-                          <div class="col-lg-7">
-                            <textarea name="comment" class="input-field" rows="8" cols="80" placeholder="Enter Reviewer Comment" required></textarea>
-                          </div>
-                        </div>
 
                         <div class="row">
                           <div class="col-lg-4">

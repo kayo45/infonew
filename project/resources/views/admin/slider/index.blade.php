@@ -33,7 +33,7 @@
 															<thead>
 																<tr>
 																	<th>Image</th>
-																	<th>Name</th>
+																	<!-- <th>Name</th> -->
 																	<th>Actions</th>
 																</tr>
 															</thead>
@@ -121,7 +121,6 @@
 		ajax: '{{ route('admin-sldr-datatables') }}',
 		columns: [
 			{ data: 'image', name: 'image' },
-			{ data: 'name', name: 'name' },
 			{ data: 'action', searchable: false, orderable: false }
 		],
 		language : {

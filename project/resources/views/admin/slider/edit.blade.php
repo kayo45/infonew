@@ -31,7 +31,7 @@
                           </div>
                         </div>
 
-                        <div class="row">
+                        <!-- <div class="row">
                           <div class="col-lg-4">
                             <div class="left-area">
                                 <h4 class="heading">Name *</h4>
@@ -41,7 +41,7 @@
                           <div class="col-lg-7">
                             <input type="text" class="input-field" name="name" placeholder="Enter Name" required="" value="{{$data->name}}">
                           </div>
-                        </div>
+                        </div> -->
 
 
                         <br>
