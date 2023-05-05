@@ -13,24 +13,20 @@
 				    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 				    
                       <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						@foreach($sliders as $slider)
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="@if($loop->first) active @endif"></li>
+						@endforeach
                       </ol>
                       
                       <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img src="{{  asset('assets/front/images/heroarea-img.jpg') }}" class="d-block w-100" alt="...">
+						@foreach($sliders as $slider)
+                        <div class="carousel-item @if($loop->first) active @endif">
+                          <img src="{{  asset('assets/front/images/'.$slider->image) }}" class="d-block w-100" alt="{{ $slider->image }}">
                         </div>
-                        <div class="carousel-item">
-                          <img src="{{  asset('assets/front/images/heroarea-img.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                          <img src="{{  asset('assets/front/images/heroarea-img.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        
-                        
+						@endforeach
                       </div>
+
+					
                       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                          <span class="mybtn1">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span></span>

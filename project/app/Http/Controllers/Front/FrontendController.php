@@ -25,6 +25,7 @@ use App\Models\Generalsetting;
 use App\Models\Pagesetting as PS;
 use App\Models\Category;
 use App\Models\Testimonial;
+use App\Models\Slider;
 use App\Classes\GeniusMailer;
 use Carbon\Carbon;
 use InvalidArgumentException;
@@ -41,6 +42,7 @@ class FrontendController extends Controller
 		public function home() {
 
 			$data['testimonials'] = Testimonial::orderBy('id', 'DESC')->get();
+			$data['sliders'] = Slider::orderBy('id', 'DESC')->get();
 			$data['blogs'] = Blog::orderBy('id', 'DESC')->limit(9)->get();
 			$data['brands'] = Brand::where('status', 1)->get();
 			$data['conditions'] = Condtion::where('status', 1)->get();
