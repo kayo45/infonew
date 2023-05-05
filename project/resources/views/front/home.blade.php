@@ -21,7 +21,7 @@
                       <div class="carousel-inner">
 						@foreach($sliders as $slider)
                         <div class="carousel-item @if($loop->first) active @endif">
-                          <img src="{{  asset('assets/front/images/'.$slider->image) }}" class="d-block w-100" alt="{{ $slider->image }}">
+                          <img src="{{  asset('assets/sliders/images/'.$slider->image) }}" class="d-block w-100" alt="{{ $slider->image }}">
                         </div>
 						@endforeach
                       </div>
