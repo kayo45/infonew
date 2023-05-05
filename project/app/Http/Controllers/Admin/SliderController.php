@@ -55,7 +55,7 @@ class SliderController extends Controller
         //--- Validation Section
         $rules = [
             'image' => 'mimes:jpeg,jpg,png,svg',
-            'name' => 'required|max:255',
+            // 'name' => 'required|max:255',
             // 'rank' => 'required|max:255',
             // 'comment' => 'required'
         ];
@@ -100,7 +100,7 @@ class SliderController extends Controller
         //--- Validation Section
         $rules = [
             'image' => 'mimes:jpeg,jpg,png,svg',
-            'name' => 'required|max:255',
+            // 'name' => 'required|max:255',
             // 'rank' => 'required|max:255',
             // 'comment' => 'required'
         ];
