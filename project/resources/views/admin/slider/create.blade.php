@@ -10,7 +10,7 @@
                     <div class="product-description">
                       <div class="body-area">
                         @include('includes.admin.form-error')
-                      <form id="geniusformdata" action="{{route('admin-tstm-create')}}" method="POST" enctype="multipart/form-data">
+                      <form id="geniusformdata" action="{{route('admin-sldr-create')}}" method="POST" enctype="multipart/form-data">
                         {{csrf_field()}}
 
                         <div class="row">
